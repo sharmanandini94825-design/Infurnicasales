@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infurnica Sales | Industrial & Hardware Leader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #05070a; color: #ffffff; overflow-x: hidden; }
+        
+        /* Page Logic */
+        .page { display: none; opacity: 0; transform: translateY(15px); transition: all 0.4s ease-in-out; }
+        .page.active { display: block; opacity: 1; transform: translateY(0); }
+        
+        .glass-nav { background: rgba(5, 7, 10, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .active-link { color: #38bdf8 !important; font-weight: 800; border-bottom: 2px solid #38bdf8; }
+        
+        /* Effects */
+        .card-glow:hover { border-color: #38bdf8; box-shadow: 0 0 25px rgba(56, 189, 248, 0.15); transition: 0.4s; }
+        .footer-link:hover { color: #38bdf8; padding-left: 5px; transition: 0.3s; }
+        iframe { filter: invert(90%) hue-rotate(180deg) brightness(95%); border-radius: 20px; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter cursor-pointer" onclick="showPage('home')">
+                INFURNICA <span class="text-sky-500">SALES</span>
+            </div>
+            <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-widest text-gray-500">
+                <a href="javascript:void(0)" onclick="showPage('home')" id="link-home" class="active-link">Home</a>
+                <a href="javascript:void(0)" onclick="showPage('solutions')" id="link-solutions">Solutions</a>
+                <a href="javascript:void(0)" onclick="showPage('about')" id="link-about">About</a>
+                <a href="javascript:void(0)" onclick="showPage('contact')" id="link-contact">Contact</a>
+            </div>
+            <a href="tel:9560481481" class="bg-sky-600 px-6 py-2 rounded-full text-xs font-bold hover:bg-sky-500 transition">INQUIRY</a>
+        </div>
+    </nav>
+
+    <div id="home" class="page active">
+        <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center pt-20 bg-[radial-gradient(circle_at_center,_#111827_0%,_#05070a_100%)]">
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-tight">Elite <span class="text-sky-500">Industrial</span><br>Hardware Hub</h1>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">Providing high-grade Door Seals, Chemical Earthing, and Solar solutions. Precision-engineered for 2026 standards.</p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <button onclick="showPage('solutions')" class="bg-white text-black px-10 py-4 rounded-2xl font-bold hover:bg-sky-400 transition">Browse Products</button>
+                <button onclick="showPage('contact')" class="border border-gray-700 px-10 py-4 rounded-2xl font-bold hover:bg-gray-800 transition">Get a Quote</button>
+            </div>
+        </section>
+    </div>
+
+    <div id="solutions" class="page pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-5xl font-extrabold mb-16 text-center">Expert <span class="text-sky-500">Divisions</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div onclick="showPage('door-details')" class="card-glow bg-gray-900/40 p-2 rounded-[2.5rem] border border-gray-800 cursor-pointer overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1510074377623-8cf13fb86c08?auto=format&fit=crop&w=500" class="w-full h-64 object-cover rounded-[2rem] mb-6 group-hover:scale-105 transition duration-500">
+                    <div class="px-6 pb-6">
+                        <h3 class="text-xl font-bold mb-2">Door Accessories</h3>
+                        <p class="text-gray-500 text-sm">Perimeter & Drop Seals Specialist</p>
+                    </div>
+                </div>
+                <div class="card-glow bg-gray-900/40 p-2 rounded-[2.5rem] border border-gray-800">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=500" class="w-full h-64 object-cover rounded-[2rem] mb-6">
+                    <div class="px-6 pb-6 text-center"><h3 class="text-xl font-bold">Earthing Systems</h3></div>
+                </div>
+                <div class="card-glow bg-gray-900/40 p-2 rounded-[2.5rem] border border-gray-800">
+                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=500" class="w-full h-64 object-cover rounded-[2rem] mb-6">
+                    <div class="px-6 pb-6 text-center"><h3 class="text-xl font-bold">UPS & Battery</h3></div>
+                </div>
+                <div class="card-glow bg-gray-900/40 p-2 rounded-[2.5rem] border border-gray-800">
+                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=500" class="w-full h-64 object-cover rounded-[2rem] mb-6">
+                    <div class="px-6 pb-6 text-center"><h3 class="text-xl font-bold">Solar Power</h3></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="door-details" class="page pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <button onclick="showPage('solutions')" class="text-sky-400 font-bold mb-10"><i class="fas fa-arrow-left mr-2"></i> All Products</button>
+            <div class="space-y-24">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600" class="md:w-1/2 h-96 object-cover rounded-3xl border border-gray-800 shadow-2xl">
+                    <div>
+                        <h3 class="text-4xl font-bold mb-6">Perimeter Seals</h3>
+                        <p class="text-gray-400 text-lg mb-8 leading-relaxed">Door ke sides aur top frame ke liye best protection. Ye noise, dust aur smoke leakage ko poori tarah block karte hain, jisse aapka room insulated rehta hai.</p>
+                        <button onclick="showPage('contact')" class="bg-sky-600 px-8 py-3 rounded-xl font-bold hover:bg-sky-500 transition">Explore Now / Inquiry</button>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="md:order-2 md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600" class="w-full h-96 object-cover rounded-3xl border border-gray-800 shadow-2xl">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-4xl font-bold mb-6">Drop Seals (Bottom)</h3>
+                        <p class="text-gray-400 text-lg mb-8 leading-relaxed">Automatic trigger system jo door band hote hi gap ko seal kar deta hai. Insects, fire aur light leakage se bachane ke liye sabse advance solution.</p>
+                        <button onclick="showPage('contact')" class="bg-sky-600 px-8 py-3 rounded-xl font-bold hover:bg-sky-500 transition">Explore Now / Inquiry</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="page pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center bg-gray-900/20 p-10 rounded-[3rem] border border-gray-800">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800" class="rounded-[2.5rem] shadow-2xl border-4 border-gray-800">
+                </div>
+                <div>
+                    <h2 class="text-5xl font-extrabold mb-8 italic">About <span class="text-sky-500">Infurnica</span></h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        Under the expert leadership of **Neeraj Sharma**, Infurnica Sales New Delhi mein industrial hardware aur power backup solutions ka ek bada naam ban chuka hai. 
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <p class="flex items-center gap-3 text-gray-300"><i class="fas fa-certificate text-sky-500"></i> Quality Tested Industrial Gear</p>
+                        <p class="flex items-center gap-3 text-gray-300"><i class="fas fa-bolt text-sky-500"></i> Expert in Chemical Earthing & Solar</p>
+                        <p class="flex items-center gap-3 text-gray-300"><i class="fas fa-user-check text-sky-500"></i> Trusted by 500+ Local Clients</p>
+                    </div>
+                    <button onclick="showPage('contact')" class="bg-white text-black px-10 py-4 rounded-2xl font-bold hover:bg-sky-400 transition">Work With Us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="page pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="bg-gray-900/80 p-10 rounded-[2.5rem] border border-sky-500/20 shadow-2xl">
+                <h3 class="text-3xl font-bold mb-8">Send Inquiry <span class="text-sky-500">(MD Neeraj Sharma)</span></h3>
+                <form id="contactForm" onsubmit="event.preventDefault(); alert('Request Received! Our team will call you soon.'); this.reset();" class="space-y-6">
+                    <input type="text" placeholder="Your Full Name" required class="w-full p-5 bg-black/50 border border-gray-800 rounded-2xl outline-none focus:border-sky-500 text-white">
+                    <input type="tel" placeholder="Mobile Number" required class="w-full p-5 bg-black/50 border border-gray-800 rounded-2xl outline-none focus:border-sky-500 text-white">
+                    <select class="w-full p-5 bg-black/50 border border-gray-800 rounded-2xl outline-none focus:border-sky-500 text-gray-400">
+                        <option>Interested In: Door Seals</option>
+                        <option>Interested In: Earthing System</option>
+                        <option>Interested In: Solar PV Plant</option>
+                        <option>Interested In: UPS/Battery</option>
+                    </select>
+                    <textarea placeholder="Tell us more about your requirement..." rows="4" class="w-full p-5 bg-black/50 border border-gray-800 rounded-2xl outline-none focus:border-sky-500 text-white"></textarea>
+                    <button type="submit" class="w-full bg-sky-600 py-5 rounded-2xl font-extrabold hover:bg-sky-500 shadow-xl shadow-sky-900/20">SEND QUOTE REQUEST</button>
+                </form>
+            </div>
+            <div class="flex flex-col">
+                <div class="h-[450px] rounded-[2.5rem] overflow-hidden border-2 border-gray-800 mb-8">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.049481232822!2d77.2586618753229!3d28.718070975618216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdd582046647%3A0xc660d268564c7a52!2sDayalpur%2C%20Nehru%20Vihar%2C%20Delhi%20110094!5e0!3m2!1sen!2sin!4v1710500000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="bg-gray-900/40 p-8 rounded-[2rem] border border-gray-800">
+                    <p class="mb-2 text-sky-500 font-bold uppercase tracking-tighter">Location</p>
+                    <p class="text-gray-300">Plot no 335 lane no 2 D- block, Nehru vihar Dayalpur, New Delhi 110094</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-black py-20 px-6 border-t border-gray-900 mt-20">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-gray-400">
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-6">INFURNICA <span class="text-sky-500">SALES</span></h3>
+                <p class="text-sm leading-relaxed mb-6">Leading supplier of premium industrial hardware and sustainable power solutions in New Delhi. Committed to safety and excellence since 2026.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-sky-600 transition text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/919560481481" class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-sky-600 transition text-white"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-sky-600 transition text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">Quick Links</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="javascript:void(0)" onclick="showPage('home')" class="footer-link block">Home Overview</a></li>
+                    <li><a href="javascript:void(0)" onclick="showPage('solutions')" class="footer-link block">Our Specialized Solutions</a></li>
+                    <li><a href="javascript:void(0)" onclick="showPage('about')" class="footer-link block">Company History</a></li>
+                    <li><a href="javascript:void(0)" onclick="showPage('contact')" class="footer-link block">Contact MD & Team</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">Our Dealings</h4>
+                <ul class="space-y-4 text-sm">
+                    <li><span class="footer-link block">Perimeter Door Seals</span></li>
+                    <li><span class="footer-link block">Automatic Drop Seals</span></li>
+                    <li><span class="footer-link block">Chemical Earthing Rods</span></li>
+                    <li><span class="footer-link block">Solar PV Plant Setup</span></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase text-sm tracking-widest">Direct Support</h4>
+                <div class="space-y-4 text-sm">
+                    <p class="flex items-center gap-3"><i class="fas fa-phone text-sky-500"></i> +91 9560481481</p>
+                    <p class="flex items-center gap-3"><i class="fas fa-envelope text-sky-500"></i> infurnicasales@gmail.com</p>
+                    <p class="flex items-start gap-3"><i class="fas fa-clock text-sky-500 mt-1"></i> Mon - Sat: 10:00 AM - 7:00 PM</p>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-gray-900 mt-16 pt-8 text-center text-[10px] font-bold text-gray-700 tracking-[0.3em] uppercase">
+            © 2026 INFURNICA SALES NEW DELHI | ALL RIGHTS RESERVED | MANAGED BY NEERAJ SHARMA
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('nav a').forEach(a => a.classList.remove('active-link'));
+            
+            document.getElementById(pageId).classList.add('active');
+            
+            const navId = (pageId === 'door-details') ? 'link-solutions' : 'link-' + pageId;
+            const link = document.getElementById(navId);
+            if(link) link.classList.add('active-link');
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
